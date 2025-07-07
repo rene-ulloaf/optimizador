@@ -1,0 +1,12 @@
+{% extends 'layouts/head.html' %}
+
+{% block content %}
+
+{{ error }}
+
+<form action="carga_archivo" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="archivo_optimizar" />
+    <input type="submit" value="Cargar" />
+</form>
+{% endblock %}

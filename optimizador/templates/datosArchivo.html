@@ -1,0 +1,22 @@
+{% extends 'layouts/head.html' %}
+
+{% block content %}
+
+<table border="1">
+{% for dato in listaDatos %}
+<tr>
+{% for d in dato %}
+<td>{{ d }}</td>
+{% endfor %}
+</tr>
+{% endfor %}
+</table>
+
+<form name="optimizar" method="post" action="optimizar">
+    {% csrf_token %}
+    <input type="hidden" name="listaDatos" value="{{ listaDatos }}" />
+    <input type="submit" value="Optimizar" />
+</form>
+
+<a href="">Volver</a>
+{% endblock %}

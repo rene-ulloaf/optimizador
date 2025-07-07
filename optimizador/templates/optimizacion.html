@@ -1,0 +1,30 @@
+{% extends 'layouts/head.html' %}
+
+{% block content %}
+
+<table border="0">
+
+{% if res.success %}
+    <tr>
+    <td>Producto A: {{ PA }} unidades</td>
+    </tr>
+    <tr>
+    <td>Producto B: {{ PB }} unidades</td>
+    </tr>
+    <tr>
+    <td>Ganancia Máx.: {{ ganancia }}</td>
+    </tr>
+    <tr>
+    <td><img src="data:image/png;base64,{{ graphic }}" alt="Gráfico de optimización"></td>
+    </tr>
+{% else %}
+    <tr><td>
+        No se pudo encontrar solución
+    </td></tr>
+{% endif %}
+    <tr><td>
+        <a href="">Volver</a>
+    </td></tr>
+</table>
+
+{% endblock %}
