@@ -12,7 +12,7 @@ Este proyecto es una aplicación web desarrollada en Django que resuelve un prob
 
 ---
 
-## 🧱 Instalación
+## Instalación
 **Clona el repositorio:**
 
 ```bash
@@ -40,3 +40,10 @@ DJANGO_SETTINGS_MODULE = tu_proyecto.settings
 python_files = tests.py test_*.py *_tests.py
 
 pytest
+
+
+## Ejecución
+Para la ejecución del sistema se debe ir a la URL http://localhost:8000/ o el puerto que configure en runserver. Se pedirá que seleccione un archivo csv como el del ejemplo. Luego se mostrarán los datos de y se podrá ejecutar el proceso.
+
+## Otros
+La aplicación está realizada para procesar un solo set de datos por csv.
